@@ -46,12 +46,16 @@ class Wallet3 extends Wallet2 {             //<<<<<<<<<<<-----------------------
 
 
     //типізований параметризований метод
-    public double buy10USD(double volume) {
+    //                                            Перевантажені  методи     завдання 3
+
+    @Override
+    double buy10USD(double volume) {
         activeBalanceUAH3 -= volume * exchangeUSD3;
         activeBalanceUSD3 += 10;
         return volume * exchangeUSD3;
     }
-    public int buy10USD(int volume) { //<-----------------------------3
+    @Override
+    int buy10USD(int volume) { //<-----------------------------3
         activeBalanceUAH3 -= volume * exchangeUSD3;
         activeBalanceUSD3 += 10;
         return (int) (volume * exchangeUSD3);

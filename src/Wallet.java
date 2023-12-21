@@ -1,9 +1,7 @@
-
-
 import java.util.Random;
 import java.util.Scanner;
 
-class Wallet {
+abstract class Wallet {
     Wallet2 wallet2 = new Wallet2();
     Wallet3 wallet3 = new Wallet3();
     private double activeBalanceUAH1 = 0;
@@ -29,6 +27,8 @@ class Wallet {
     Wallet() {
     }
 
+    abstract void statistic();
+
     //Створення початкового балансу та 16-значного коду
     void inputBalance() {
         System.out.print("Введіть суму на яку хочете поповнити баланс картки (у UAH) : ");
@@ -45,7 +45,8 @@ class Wallet {
     }
 
     //конвертація
-    double convertToUSD() {
+    //                                     final   МЕТОД
+    final double convertToUSD() {
         System.out.print("Введіть суму яку хочете конвертувати (у UAH) : ");
         double volume=scan.nextDouble();
         activeBalanceUAH1 -= volume;
@@ -54,6 +55,7 @@ class Wallet {
     }
 
     //                                            Перевизначений  метод     завдання 3
+
     double convertToUSD(double volume) {
         activeBalanceUAH1 -= volume;
         activeBalanceUSD1 = (double) Math.round(volume / exchangeUSD1 * 100) /100;
@@ -70,11 +72,16 @@ class Wallet {
     }
 
     //типізований параметризований метод
+
+    //                                            Перевантажені  методи     завдання 3
+
+
     double buy10USD(double volume) {
         activeBalanceUAH1 -= volume * exchangeUSD1;
         activeBalanceUSD1 += 10;
         return volume * exchangeUSD1;
     }
+
     int buy10USD(int volume) {
         activeBalanceUAH1 -= volume * exchangeUSD1;
         activeBalanceUSD1 += 10;

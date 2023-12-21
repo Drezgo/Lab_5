@@ -1,4 +1,4 @@
-public class Credit extends Wallet2{
+public final class Credit extends Wallet2{
 //    double stavka;
 
 

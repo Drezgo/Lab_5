@@ -33,7 +33,7 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
     }
 
     //Створення початкового балансу та 16-значного коду
-    private void inputBalance(double bal) {
+    void inputBalance(double bal) {
         activeBalanceUAH2 =bal;
         for (int i=1; i<17; i++ ) {
             int randNum = random.nextInt(10);
@@ -49,12 +49,16 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
     }
 
     //типізований параметризований метод
-    public double buy10USD(double volume) {
+    //                                            Перевантажені  методи     завдання 3
+
+    @Override
+    double buy10USD(double volume) {
         activeBalanceUAH2 -= volume * exchangeUSD1;
         activeBalanceUSD2 += 10;
         return volume * exchangeUSD1;
     }
-    public int buy10USD(int volume) {
+    @Override
+    int buy10USD(int volume) {
         activeBalanceUAH2 -= volume * exchangeUSD1;
         activeBalanceUSD2 += 10;
         return (int) (volume * exchangeUSD1);
