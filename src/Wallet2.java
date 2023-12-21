@@ -32,6 +32,10 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
     Wallet2(){
     }
 
+    @Override
+    void statistic() {
+    }
+
     //Створення початкового балансу та 16-значного коду
     void inputBalance(double bal) {
         activeBalanceUAH2 =bal;
@@ -66,7 +70,7 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
 
 
     //Статистика кожної ітерації(перевантажений метод)
-    public void statistics() {
+    void statistics() {
         System.out.println("_____________________________2ий гаманець_____________________________________________________");
         System.out.println("Ваш унікальний код рахунку: " + uniCode.toString());
         System.out.println("Баланс Вашої крартки: " + (double) Math.round(activeBalanceUAH2 * 100) /100 + " гривень");
