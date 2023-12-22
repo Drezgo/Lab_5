@@ -5,11 +5,11 @@ public class Dispetchering {
     Credit credit = new Credit();
     void menu (int num) {
         if (num == 1) {
-
+            wallet.statistic();
         } else if (num == 2) {
-
+            wall2.statisticsDemo();
         } else if (num == 3) {
-            
+            wall3.statistics();
         }
     }
 

@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Dispetchering dsp = new Dispetchering();
-        Wallet wallet = new Wallet();
+        Wallet wallet = new Wallet( );
         Wallet2 wall2 = new Wallet2(0,0,0,36.93,39.33);
         Wallet3 wall3 = new Wallet3(0,0,0,36.93,39.33);
         Credit credit = new Credit();
@@ -21,11 +21,11 @@ public class Main {
         wall3.inputBalance(10000);
 
         while (activeSession) {
-            wall2.statisticsDemo();
+            dsp.menu(2);
             System.out.println("Чи однаковий курс гаманців - " + wallet.isRivne());//<<<<<<<<<<<<------------------------
             wall3.setExchangeUSD1(36.93);//<<<<<<<<<<<<------------------------
             System.out.println("__________________________ "+wall3.getExchangeUSD1()+" $________________________________");//<<<<<<<-----------
-            wall3.statistics();
+            dsp.menu(3);
             System.out.println("Оберіть наступну дію: ");
             System.out.println("[1]  Конвертувати валюту у USD");
             System.out.println("[2]  Конвертувати валюту у EUR");
