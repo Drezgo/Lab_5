@@ -27,7 +27,6 @@ abstract class Wallet {
     Wallet() {
     }
 
-    abstract void statistic();
 
     //Створення початкового балансу та 16-значного коду
     void inputBalance() {
@@ -92,8 +91,10 @@ abstract class Wallet {
         return wallet2.getActiveBalanceUSD1() == wallet3.getExchangeUSD1();
     }
 
+    abstract void statistics();
+
     //Статистика кожної ітерації (перевантажений метод)
-    void statistics() {
+    void statistic() {
         System.out.println();
         System.out.println("__________________________ "+ exchangeUSD1 +" $ / "+ exchangeEUR1 +" € ________________________________");
         System.out.println("Ваш унікальний код рахунку: " + uniCode.toString());

@@ -32,9 +32,6 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
     Wallet2(){
     }
 
-    @Override
-    void statistic() {
-    }
 
     //Створення початкового балансу та 16-значного коду
     void inputBalance(double bal) {
@@ -70,6 +67,7 @@ class Wallet2 extends Wallet{         //<<<<<<<<<<<-----------------------------
 
 
     //Статистика кожної ітерації(перевантажений метод)
+    @Override
     void statistics() {
         System.out.println("_____________________________2ий гаманець_____________________________________________________");
         System.out.println("Ваш унікальний код рахунку: " + uniCode.toString());
